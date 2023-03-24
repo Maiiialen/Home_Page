@@ -1,8 +1,9 @@
 :root {
-    --dark-background: #272D2D;
+    --dark: #272D2D;
     --blue-background: #28292E;
-    --light-background: #F7F7FF;
-    --gray: #8F9296;
+    --light: #F7F7FF;
+    --gray: #535456;
+    /* --gray: #8F9296; */
     --red: #C03221;
     --blue: #2667FF;
     --brown: #FFB563;
@@ -13,11 +14,106 @@ body {
     display: inline-block;
 }
 
+.center {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
 .page {
     height: 100vh;
     width: 100vw;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color: var(--dark-background);
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* background-color: var(--blue-background); */
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#date {
+    font-size: 6em;
+}
+
+#hour {
+    font-size: 10em;
+}
+#greeting {
+    font-size: 4em;
+}
+
+.links {
+    height: calc(50vh - 40px);
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    margin: 0 80px;
+    gap: 40px;
+}
+
+#boxes {
+    display: grid;
+    height: calc(100% - 20px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.box{
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray);
+    border: solid 6px var(--gray);
+    border-radius: 12px;
+}
+
+.boxImg {
+    max-height: 50%;
+    max-width: 50%;
+}
+
+#columns {
+    display: grid;
+    height: calc(100% - 20px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.listBox {
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    border: solid 6px var(--gray);
+    border-radius: 12px;
+}
+
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.25em;
+}
+
+.listTitle {
+    align-self: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.mode {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    margin: 1rem;
 }
