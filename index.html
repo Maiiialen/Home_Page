@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/png" href="./imgs/home.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <div class="page">
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/png" href="./imgs/home.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="page">
+            <div class="info">
+                <div class="center">
+                    <div id="hour"></div>
+                    <div id="greeting"></div>
+                </div>
+                <div class="center">
+                    <div id="date"></div>
+                </div>
+            </div>
+            <div class="links">
+                <div id="boxes"></div>
+                <div id="columns"></div>
+            </div>
+            <img class="mode" src="./imgs/brightness-and-contrast.png"
+                alt="brightness-and-contrast">
+        </div>
+        <script src="js/date.js"></script>
+        <script src="js/pages.js"></script>
+    </body>
 </html>
