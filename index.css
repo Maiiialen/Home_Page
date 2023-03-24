@@ -1,0 +1,23 @@
+:root {
+    --dark-background: #272D2D;
+    --blue-background: #28292E;
+    --light-background: #F7F7FF;
+    --gray: #8F9296;
+    --red: #C03221;
+    --blue: #2667FF;
+    --brown: #FFB563;
+}
+
+body {
+    margin: 0;
+    display: inline-block;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--dark-background);
+    /* background-color: var(--blue-background); */
+}
