@@ -8,25 +8,22 @@
         <title>Home Page</title>
         <link rel="stylesheet" href="index.css">
     </head>
-    <body>
-        <div class="page">
+    <body class="dark">
+        <div id="page">
             <div class="info">
-                <div class="center">
                     <div id="hour"></div>
-                    <div id="greeting"></div>
-                </div>
-                <div class="center">
                     <div id="date"></div>
-                </div>
+                    <div id="greeting"></div>
             </div>
             <div class="links">
                 <div id="boxes"></div>
                 <div id="columns"></div>
             </div>
-            <img class="mode" src="./imgs/brightness-and-contrast.png"
+            <img id="mode" src="./imgs/brightness-and-contrast.png"
                 alt="brightness-and-contrast">
         </div>
         <script src="js/date.js"></script>
         <script src="js/pages.js"></script>
+        <script src="js/light-mode.js"></script>
     </body>
 </html>

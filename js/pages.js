@@ -10,7 +10,7 @@ const pagesBoxes = [
     ["Portfolio", "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/", "start-up.png"],
 ]
 
-const listTittles = ["Nice documentation", "Needed pages"]
+const listTittles = ["Nice Documentations", "Essential Pages"]
 const pagesLists = [
     [
         ["The Odin Project", "https://www.theodinproject.com/"],
