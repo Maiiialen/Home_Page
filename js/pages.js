@@ -23,13 +23,17 @@ const pagesLists = [
         ["Developer mozilla", "https://developer.mozilla.org/en-US/"],
     ]
 ]
+const boxColors = ["violet", "red", "blue", "yellow", "green"]
+const listColors = ["ocean", "green"]
 
-pagesBoxes.forEach((page) => {
+pagesBoxes.forEach((page, index) => {
     const img = document.createElement("img")
     img.src = `../imgs/${page[2]}`
     img.alt = page[0]
     const box = document.createElement("div")
     img.className = "boxImg"
+    box.style.color = `var(--${boxColors[index%5]})`
+    box.style.background = `linear-gradient(135deg, var(--${boxColors[index%5]}) 27%, var(--dark-${boxColors[index%5]}) 50%, var(--${boxColors[index%5]}) 73%)`
     box.className = "box"
     box.onclick = () => location.href = page[1]
     box.appendChild(img)
@@ -38,6 +42,8 @@ pagesBoxes.forEach((page) => {
 
 pagesLists.forEach((list, index) => {
     const box = document.createElement("div")
+    box.style.color = `var(--${listColors[index%5]})`
+    box.style.background = `linear-gradient(135deg, var(--${listColors[index%5]}) 27%, var(--dark-${listColors[index%5]}) 50%, var(--${listColors[index%5]}) 73%)`
     box.className = "listBox"
     const title = document.createElement("div")
     title.className = "listTitle"

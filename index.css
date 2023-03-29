@@ -2,14 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap');
 
 :root {
-    --dark: #272D2D;
-    --blue-background: #28292E;
+    --dark: #28292E;
     --light: #F7F7FF;
     --gray: #535456;
     /* --gray: #8F9296; */
-    --red: #C03221;
-    --blue: #2667FF;
-    --brown: #FFB563;
+    --red: #f54632;
+    --dark-red: #ad1402;
+    --blue: #19a3ff;
+    --dark-blue: #1969ff;
+    --yellow: #FCF300;
+    --dark-yellow: #b69504;
+    --violet: #8c37ec;
+    --dark-violet: #6614c5;
+    --green: #3fff00;
+    --dark-green: #31b804;
+    --ocean: #00e2c4;
+    --dark-ocean: #009b86;
 
     font-family: 'Kanit', sans-serif;
     font-style: italic;
@@ -19,6 +27,7 @@
 body {
     margin: 0;
     display: inline-block;
+    overflow: hidden;
 }
 
 #page {
@@ -96,9 +105,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--gray);
-    border: solid 6px var(--gray);
     border-radius: 12px;
+    box-shadow:
+        -110px -110px 20px -100px,
+        110px 110px 20px -100px;
 }
 
 .boxImg {
@@ -114,12 +124,14 @@ body {
 }
 
 .listBox {
-    height: calc(100% - 12px);
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--gray);
-    border: solid 6px var(--gray);
     border-radius: 12px;
+    box-shadow:
+        -150px -150px 20px -140px,
+        150px 150px 20px -140px;
 }
 
 .list {
@@ -129,6 +141,7 @@ body {
     gap: 10px;
     font-size: 1.25em;
     font-style: normal;
+    color: black;
 }
 
 .listTitle {
@@ -137,6 +150,7 @@ body {
     font-size: var(--text-font);
     font-weight: 600;
     letter-spacing: 1px;
+    color: black;
 }
 
 #mode {
