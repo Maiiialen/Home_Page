@@ -16,8 +16,12 @@
     --dark-violet: #6614c5;
     --green: #3fff00;
     --dark-green: #31b804;
+    --pink: #e100ff;
+    --dark-pink: #a700bd;
     --ocean: #00e2c4;
-    --dark-ocean: #009b86;
+    --dark-ocean: #00a18c;
+    --orange: #ffbb00;
+    --dark-orange: #cf9800;
 
     font-family: 'Kanit', sans-serif;
     font-style: italic;
@@ -36,7 +40,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    --new-margin: 80px;
+    --new-margin: 100px;
     --hour-font: clamp(24px, 10em, 17vh);
     --date-font: clamp(24px, 4.4em, 10vh);
     --greeting-font: clamp(24px, 3.5em, 7vh);
@@ -86,7 +90,7 @@ body {
     display: grid;
     grid-template-columns: 5fr 4fr;
     grid-template-rows: 1fr;
-    margin: 0 var(--new-margin) calc(var(--new-margin)/2) var(--new-margin);
+    margin: calc(var(--new-margin)/2) var(--new-margin);
     gap: calc(var(--new-margin)/2);
 }
 
@@ -106,14 +110,20 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    box-shadow:
-        -110px -110px 20px -100px,
-        110px 110px 20px -100px;
 }
 
 .boxImg {
     max-height: 50%;
     max-width: 50%;
+
+    padding: 15%;
+    background:
+        linear-gradient(to right, black 8px, transparent 8px) 0 0,
+        linear-gradient(to left, black 8px, transparent 8px) 100% 100%,
+        linear-gradient(to bottom, black 8px, transparent 8px) 0 0,
+        linear-gradient(to top, black 8px, transparent 8px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 15% 15%;
 }
 
 #columns {
@@ -124,14 +134,27 @@ body {
 }
 
 .listBox {
+    position: relative;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--gray);
     border-radius: 12px;
-    box-shadow:
-        -150px -150px 20px -140px,
-        150px 150px 20px -140px;
+}
+
+.decotation {
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    margin: 5%;
+    background:
+        linear-gradient(to right, black 8px, transparent 8px) 0 0,
+        linear-gradient(to left, black 8px, transparent 8px) 100% 100%,
+        linear-gradient(to bottom, black 8px, transparent 8px) 0 0,
+        linear-gradient(to top, black 8px, transparent 8px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 15% 15%;
 }
 
 .list {
@@ -175,7 +198,7 @@ body {
 
 @media (max-width: 1100px) {
     #page {
-        --new-margin: 40px;
+        --new-margin: 60px;
         --date-font: clamp(24px, 4em, 5vh);
         --hour-font: clamp(24px, 10em, 10vh);
         --greeting-font: clamp(24px, 3.5em, 4vh);
@@ -190,6 +213,16 @@ body {
     .links {
         height: calc(65vh - var(--new-margin)/2);
         grid-template-columns: 1fr 1fr;
+    }
+
+    .boxImg {
+        background:
+            linear-gradient(to right, black 6px, transparent 6px) 0 0,
+            linear-gradient(to left, black 6px, transparent 6px) 100% 100%,
+            linear-gradient(to bottom, black 6px, transparent 6px) 0 0,
+            linear-gradient(to top, black 6px, transparent 6px) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 15% 15%;
     }
 
     #columns {
@@ -208,11 +241,21 @@ body {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, 1fr);
     }
+
+    .boxImg {
+        background:
+            linear-gradient(to right, black 6px, transparent 6px) 0 0,
+            linear-gradient(to left, black 6px, transparent 6px) 100% 100%,
+            linear-gradient(to bottom, black 6px, transparent 6px) 0 0,
+            linear-gradient(to top, black 6px, transparent 6px) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 15% 15%;
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     #page {
-        --new-margin: 20px;
+        --new-margin: 40px;
         --date-font: clamp(24px, 4em, 4vh);
         --hour-font: clamp(24px, 4em, 8vh);
         --greeting-font: clamp(24px, 0.25em, 3vh);
@@ -237,6 +280,16 @@ body {
 
     .list {
         padding: 10px;
+    }
+}
+
+@media (max-width: 400px) and (max-height: 1100px) {
+    #page {
+        --new-margin: 20px;
+        --date-font: clamp(24px, 4em, 4vh);
+        --hour-font: clamp(24px, 4em, 8vh);
+        --greeting-font: clamp(24px, 0.25em, 3vh);
+        --text-font: clamp(18px, 1em, 5vh);
     }
 }
 
@@ -271,5 +324,16 @@ body {
     .list {
         gap: 5px;
         padding: 10px;
+    }
+}
+
+@media (max-height: 900px) and (min-width: 400px) {
+    .links {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #boxes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
 }
