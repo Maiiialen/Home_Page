@@ -1,99 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap');
+
 :root {
-    --dark: #272D2D;
-    --blue-background: #28292E;
+    --dark: #28292E;
     --light: #F7F7FF;
     --gray: #535456;
     /* --gray: #8F9296; */
-    --red: #C03221;
-    --blue: #2667FF;
-    --brown: #FFB563;
+    --red: #f54632;
+    --dark-red: #ad1402;
+    --blue: #19a3ff;
+    --dark-blue: #1969ff;
+    --yellow: #FCF300;
+    --dark-yellow: #b69504;
+    --violet: #8c37ec;
+    --dark-violet: #6614c5;
+    --green: #3fff00;
+    --dark-green: #31b804;
+    --pink: #e100ff;
+    --dark-pink: #a700bd;
+    --ocean: #00e2c4;
+    --dark-ocean: #00a18c;
+    --orange: #ffbb00;
+    --dark-orange: #cf9800;
+
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    font-weight: 400;
 }
 
 body {
     margin: 0;
     display: inline-block;
+    overflow: hidden;
 }
 
-.center {
-    display: grid;
-    align-content: center;
-    justify-items: center;
-}
-
-.page {
+#page {
     height: 100vh;
     width: 100vw;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+
+    --new-margin: 100px;
+    --hour-font: clamp(24px, 10em, 17vh);
+    --date-font: clamp(24px, 4.4em, 10vh);
+    --greeting-font: clamp(24px, 3.5em, 7vh);
+    --text-font: clamp(18px, 1.25em, 5vh);
+}
+
+.dark {
     background-color: var(--dark);
     color: var(--light);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* background-color: var(--blue-background); */
+}
+
+.light {
+    background-color: var(--light);
+    color: var(--dark);
 }
 
 .info {
+    height: calc(41vh - 1.5*var(--new-margin));
+    margin: calc(var(--new-margin)/2) var(--new-margin) var(--new-margin) var(--new-margin);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.info>*:nth-child(3) {
+    grid-column: 1/-1;
 }
 
 #date {
-    font-size: 6em;
+    font-size: var(--date-font);
 }
 
 #hour {
-    font-size: 10em;
+    font-size: var(--hour-font);
+
 }
+
 #greeting {
-    font-size: 4em;
+    font-size: var(--greeting-font);
 }
 
 .links {
-    height: calc(50vh - 40px);
+    height: calc(59vh - var(--new-margin)/2);
+    width: calc(100% - 2*var(--new-margin));
     display: grid;
-    grid-template-columns: 4fr 3fr;
-    margin: 0 80px;
-    gap: 40px;
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: 1fr;
+    margin: calc(var(--new-margin)/2) var(--new-margin);
+    gap: calc(var(--new-margin)/2);
 }
 
 #boxes {
     display: grid;
-    height: calc(100% - 20px);
+    height: 100%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 40px;
+    grid-auto-rows: 1fr;
+    gap: calc(var(--new-margin)/2);
 }
 
-.box{
+.box {
     max-height: 100%;
     max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--gray);
-    border: solid 6px var(--gray);
     border-radius: 12px;
 }
 
 .boxImg {
     max-height: 50%;
     max-width: 50%;
+
+    padding: 15%;
+    background:
+        linear-gradient(to right, black 8px, transparent 8px) 0 0,
+        linear-gradient(to left, black 8px, transparent 8px) 100% 100%,
+        linear-gradient(to bottom, black 8px, transparent 8px) 0 0,
+        linear-gradient(to top, black 8px, transparent 8px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 15% 15%;
 }
 
 #columns {
     display: grid;
-    height: calc(100% - 20px);
+    height: 100%;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: calc(var(--new-margin)/2);
 }
 
 .listBox {
-    max-height: 100%;
-    max-width: 100%;
+    position: relative;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--gray);
-    border: solid 6px var(--gray);
     border-radius: 12px;
+}
+
+.decotation {
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    margin: 5%;
+    background:
+        linear-gradient(to right, black 8px, transparent 8px) 0 0,
+        linear-gradient(to left, black 8px, transparent 8px) 100% 100%,
+        linear-gradient(to bottom, black 8px, transparent 8px) 0 0,
+        linear-gradient(to top, black 8px, transparent 8px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 15% 15%;
 }
 
 .list {
@@ -102,18 +163,177 @@ body {
     flex-direction: column;
     gap: 10px;
     font-size: 1.25em;
+    font-style: normal;
+    color: black;
 }
 
 .listTitle {
     align-self: center;
     padding: 20px;
-    font-size: 1.5em;
+    font-size: var(--text-font);
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
 }
 
-.mode {
+#mode {
     position: fixed;
     top: 0;
     right: 0;
     width: 50px;
-    margin: 1rem;
+    margin: 10px;
+}
+
+
+@media (max-width: 1500px) {
+    .links {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #boxes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1100px) {
+    #page {
+        --new-margin: 60px;
+        --date-font: clamp(24px, 4em, 5vh);
+        --hour-font: clamp(24px, 10em, 10vh);
+        --greeting-font: clamp(24px, 3.5em, 4vh);
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        height: calc(35vh - 1.5*var(--new-margin));
+    }
+
+    .links {
+        height: calc(65vh - var(--new-margin)/2);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .boxImg {
+        background:
+            linear-gradient(to right, black 6px, transparent 6px) 0 0,
+            linear-gradient(to left, black 6px, transparent 6px) 100% 100%,
+            linear-gradient(to bottom, black 6px, transparent 6px) 0 0,
+            linear-gradient(to top, black 6px, transparent 6px) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 15% 15%;
+    }
+
+    #columns {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 750px) {
+    .links {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    #boxes {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .boxImg {
+        background:
+            linear-gradient(to right, black 6px, transparent 6px) 0 0,
+            linear-gradient(to left, black 6px, transparent 6px) 100% 100%,
+            linear-gradient(to bottom, black 6px, transparent 6px) 0 0,
+            linear-gradient(to top, black 6px, transparent 6px) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 15% 15%;
+    }
+}
+
+@media (max-width: 600px) {
+    #page {
+        --new-margin: 40px;
+        --date-font: clamp(24px, 4em, 4vh);
+        --hour-font: clamp(24px, 4em, 8vh);
+        --greeting-font: clamp(24px, 0.25em, 3vh);
+        --text-font: clamp(18px, 1em, 5vh);
+    }
+
+    .info {
+        height: calc(25vh - var(--new-margin) - var(--new-margin));
+    }
+
+    .links {
+        height: calc(75vh - var(--new-margin)/2);
+    }
+
+    #columns {
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .listTitle {
+        padding: 10px;
+    }
+
+    .list {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) and (max-height: 1100px) {
+    #page {
+        --new-margin: 20px;
+        --date-font: clamp(24px, 4em, 4vh);
+        --hour-font: clamp(24px, 4em, 8vh);
+        --greeting-font: clamp(24px, 0.25em, 3vh);
+        --text-font: clamp(18px, 1em, 5vh);
+    }
+}
+
+@media (max-height: 900px) {
+    #page {
+        --new-margin: 20px;
+        --date-font: clamp(24px, 4em, 4vh);
+        --hour-font: clamp(24px, 4em, 8vh);
+        --greeting-font: clamp(24px, 0.25em, 3vh);
+        --text-font: clamp(18px, 1em, 5vh);
+    }
+
+    .info {
+        height: calc(30vh - var(--new-margin) - var(--new-margin));
+    }
+
+    .links {
+        height: calc(70vh - var(--new-margin)/2);
+    }
+
+    #columns {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: calc(var(--new-margin)/2);
+    }
+
+    .listTitle {
+        padding: 5px;
+    }
+
+    .list {
+        gap: 5px;
+        padding: 10px;
+    }
+}
+
+@media (max-height: 900px) and (min-width: 400px) {
+    .links {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #boxes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 }

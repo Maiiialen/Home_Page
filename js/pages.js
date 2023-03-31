@@ -10,7 +10,7 @@ const pagesBoxes = [
     ["Portfolio", "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/", "start-up.png"],
 ]
 
-const listTittles = ["Nice documentation", "Needed pages"]
+const listTittles = ["Nice Documentations", "Essential Pages"]
 const pagesLists = [
     [
         ["The Odin Project", "https://www.theodinproject.com/"],
@@ -23,13 +23,21 @@ const pagesLists = [
         ["Developer mozilla", "https://developer.mozilla.org/en-US/"],
     ]
 ]
+const boxColors = ["violet", "red", "yellow", "green", "blue",  "pink"]
+const listColors = ["ocean", "orange"]
 
-pagesBoxes.forEach((page) => {
+pagesBoxes.forEach((page, index) => {
     const img = document.createElement("img")
     img.src = `../imgs/${page[2]}`
     img.alt = page[0]
+    const decoration1 = document.createElement("div")
+    decoration1.className = "decoration"
+    const decoration2 = document.createElement("div")
+    decoration2.className = "decoration"
     const box = document.createElement("div")
     img.className = "boxImg"
+    box.style.color = `var(--${boxColors[index%boxColors.length]})`
+    box.style.background = `linear-gradient(135deg, var(--${boxColors[index%boxColors.length]}) 27%, var(--dark-${boxColors[index%boxColors.length]}) 50%, var(--${boxColors[index%boxColors.length]}) 73%)`
     box.className = "box"
     box.onclick = () => location.href = page[1]
     box.appendChild(img)
@@ -38,6 +46,8 @@ pagesBoxes.forEach((page) => {
 
 pagesLists.forEach((list, index) => {
     const box = document.createElement("div")
+    box.style.color = `var(--${listColors[index%listColors.length]})`
+    box.style.background = `linear-gradient(135deg, var(--${listColors[index%listColors.length]}) 27%, var(--dark-${listColors[index%listColors.length]}) 50%, var(--${listColors[index%listColors.length]}) 73%)`
     box.className = "listBox"
     const title = document.createElement("div")
     title.className = "listTitle"
