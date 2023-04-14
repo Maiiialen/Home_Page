@@ -11,13 +11,11 @@ const greeting = document.getElementById("greeting")
 
 function setDate() {
     dateObj.innerText = `${today.getDay() + 1} ${monthNames[today.getMonth()]} ${today.getFullYear()}`
-    return;
 }
 
 function setHour() {
     hourObj.innerText = `${today.getHours()}:${('0' + today.getMinutes()).slice(-2)}`
     // hourObj.innerText = `${today.getHours()}:${('0' + today.getMinutes()).slice(-2)}:${('0' + today.getSeconds()).slice(-2)}`
-    return;
 }
 
 function setGreeting() {
@@ -30,7 +28,6 @@ function setGreeting() {
     } else {
         greeting.innerText = 'Good evening my Guest!';
     }
-    return;
 }
 
 function displayClock() {
@@ -38,7 +35,7 @@ function displayClock() {
     setDate()
     setHour()
     setGreeting()
-    setTimeout(displayClock, 10);
+    setTimeout(displayClock, 500);
 }
 
 window.onload = displayClock();
