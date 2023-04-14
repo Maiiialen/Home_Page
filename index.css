@@ -49,6 +49,11 @@ body {
     --text-font: clamp(18px, 1.25em, 5vh);
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .dark {
     background-color: var(--dark);
     color: var(--light);
@@ -160,20 +165,6 @@ body {
     box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.5);
 }
 
-.decotation {
-    position: absolute;
-    height: 95%;
-    width: 95%;
-    margin: 5%;
-    background:
-        linear-gradient(to right, black 8px, transparent 8px) 0 0,
-        linear-gradient(to left, black 8px, transparent 8px) 100% 100%,
-        linear-gradient(to bottom, black 8px, transparent 8px) 0 0,
-        linear-gradient(to top, black 8px, transparent 8px) 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 15% 15%;
-}
-
 .list {
     list-style-type: none;
     display: flex;
@@ -182,6 +173,7 @@ body {
     font-size: 1.25em;
     font-style: normal;
     color: black;
+    padding-right: 10px;
 }
 
 .listTitle {
