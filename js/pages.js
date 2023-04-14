@@ -50,7 +50,7 @@ function buildBoxes() {
   })
 }
 
-function getListObject(page){
+function getListObject(page) {
   const listObjects = document.createElement("ul")
   page.forEach((page) => {
     const listObject = document.createElement("li")
@@ -63,14 +63,14 @@ function getListObject(page){
   return listObjects
 }
 
-function getListTitle(index){
+function getListTitle(index) {
   const listTitle = document.createElement("div")
   listTitle.className = "listTitle"
   listTitle.innerText = listTittles[index]
   return listTitle
 }
 
-function getList(page, index){
+function getList(page, index) {
   const list = document.createElement("div")
   list.style.color = `var(--${listColors[index % listColors.length]})`
   list.style.background = `linear-gradient(135deg, var(--${listColors[index % listColors.length]}) 27%, var(--dark-${listColors[index % listColors.length]}) 50%, var(--${listColors[index % listColors.length]}) 73%)`
