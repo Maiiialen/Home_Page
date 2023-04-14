@@ -50,27 +50,39 @@ function buildBoxes() {
   })
 }
 
+function getListObject(page){
+  const listObjects = document.createElement("ul")
+  page.forEach((page) => {
+    const listObject = document.createElement("li")
+    listObject.className = "listItem"
+    listObject.innerText = page[0]
+    listObject.onclick = () => location.href = page[1]
+    listObjects.appendChild(listObject)
+  })
+  listObjects.className = "list"
+  return listObjects
+}
+
+function getListTitle(index){
+  const listTitle = document.createElement("div")
+  listTitle.className = "listTitle"
+  listTitle.innerText = listTittles[index]
+  return listTitle
+}
+
+function getList(page, index){
+  const list = document.createElement("div")
+  list.style.color = `var(--${listColors[index % listColors.length]})`
+  list.style.background = `linear-gradient(135deg, var(--${listColors[index % listColors.length]}) 27%, var(--dark-${listColors[index % listColors.length]}) 50%, var(--${listColors[index % listColors.length]}) 73%)`
+  list.className = "listBox"
+  list.appendChild(getListTitle(index))
+  list.appendChild(getListObject(page))
+  return list
+}
+
 function buildLists() {
-  pagesLists.forEach((list, index) => {
-    const box = document.createElement("div")
-    box.style.color = `var(--${listColors[index % listColors.length]})`
-    box.style.background = `linear-gradient(135deg, var(--${listColors[index % listColors.length]}) 27%, var(--dark-${listColors[index % listColors.length]}) 50%, var(--${listColors[index % listColors.length]}) 73%)`
-    box.className = "listBox"
-    const title = document.createElement("div")
-    title.className = "listTitle"
-    title.innerText = listTittles[index]
-    box.appendChild(title)
-    const listObjects = document.createElement("ul")
-    list.forEach((page) => {
-      const object = document.createElement("li")
-      object.className = "listItem"
-      object.innerText = page[0]
-      object.onclick = () => location.href = page[1]
-      listObjects.appendChild(object)
-    })
-    listObjects.className = "list"
-    box.appendChild(listObjects)
-    columns.appendChild(box)
+  pagesLists.forEach((page, index) => {
+    columns.appendChild(getList(page, index))
   })
 }
 
