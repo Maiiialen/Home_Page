@@ -1,22 +1,24 @@
-window.onload = displayClock();
+let today = new Date()
 
-function displayClock() {
-    const today = new Date()
+const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+]
 
-    const monthNames = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
-    ]
+const dateObj = document.getElementById("date")
+const hourObj = document.getElementById("hour")
+const greeting = document.getElementById("greeting")
 
-    const dateObj = document.getElementById("date")
+function setDate() {
     dateObj.innerText = `${today.getDay() + 1} ${monthNames[today.getMonth()]} ${today.getFullYear()}`
+}
 
-
-    const hourObj = document.getElementById("hour")
+function setHour() {
     hourObj.innerText = `${today.getHours()}:${('0' + today.getMinutes()).slice(-2)}`
+    // hourObj.innerText = `${today.getHours()}:${('0' + today.getMinutes()).slice(-2)}:${('0' + today.getSeconds()).slice(-2)}`
+}
 
-
-    const greeting = document.getElementById("greeting")
+function setGreeting() {
     const hour = today.getHours()
 
     if (hour >= 6 && hour < 12) {
@@ -26,6 +28,14 @@ function displayClock() {
     } else {
         greeting.innerText = 'Good evening my Guest!';
     }
-
-    setTimeout(displayClock, 1000);
 }
+
+function displayClock() {
+    today = new Date()
+    setDate()
+    setHour()
+    setGreeting()
+    setTimeout(displayClock, 500);
+}
+
+window.onload = displayClock();
