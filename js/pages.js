@@ -2,7 +2,7 @@ const boxes = document.getElementById("boxes")
 const columns = document.getElementById("columns")
 
 const pagesBoxes = [
-    ["GitHub", "https://github.com/Maiiialen", "github.png"],
+    ["GitHub", "https://github.com/Maiiialen", "github-mark.png"],
     ["Linkedin", "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/", "linkedin.png"],
     ["DnD Chess", "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/", "start-up.png"],
     ["Library", "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/", "start-up.png"],
