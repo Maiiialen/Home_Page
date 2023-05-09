@@ -28,7 +28,7 @@ const listColors = ["ocean", "orange"]
 
 function getImage(page) {
     const img = document.createElement("img")
-    img.src = `../imgs/${page[2]}`
+    img.src = `./imgs/${page[2]}`
     img.alt = page[0]
     img.className = "boxImg"
     return img;
