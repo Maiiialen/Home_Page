@@ -77,12 +77,14 @@ function buildBoxes() {
 function getListObject(page) {
   const listObjects = document.createElement("ul");
   page.forEach((page) => {
-    const listObject = document.createElement("a");
-    listObject.className = "listItem";
-    listObject.innerText = page[0];
+    const listObject = document.createElement("li");
+    const linkObject = document.createElement("a");
+    linkObject.className = "listItem";
+    linkObject.innerText = page[0];
     // listObject.onclick = () => location.href = page[1]
-    listObject.href = page[1];
+    linkObject.href = page[1];
     listObjects.appendChild(listObject);
+    listObject.appendChild(linkObject);
   });
   listObjects.className = "list";
   return listObjects;
