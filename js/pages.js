@@ -2,31 +2,31 @@ const boxes = document.getElementById("boxes");
 const columns = document.getElementById("columns");
 
 const pagesBoxes = [
-  ["GitHub", "https://github.com/Maiiialen", "github-mark.png"],
+  ["GitHub", "https://github.com/Maiiialen", "github-mark.webp"],
   [
     "Linkedin",
     "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "linkedin.png",
+    "linkedin.webp",
   ],
   [
     "DnD Chess",
     "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "start-up.png",
+    "start-up.webp",
   ],
   [
     "Library",
     "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "start-up.png",
+    "start-up.webp",
   ],
   [
     "UI Environment",
     "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "start-up.png",
+    "start-up.webp",
   ],
   [
     "Portfolio",
     "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "start-up.png",
+    "start-up.webp",
   ],
 ];
 

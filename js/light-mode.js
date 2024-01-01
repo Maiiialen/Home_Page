@@ -9,7 +9,7 @@ function changeLightMode() {
   page.className = modes[(modes.indexOf(page.className) + 1) % 2];
   light.src = `./imgs/brightness-and-contrast-${
     modes[(modes.indexOf(page.className) + 1) % 2]
-  }.png`;
+  }.webp`;
   circle.classList.add("animate");
   setTimeout(restoreSize, 1500);
 }
