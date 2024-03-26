@@ -1,60 +1,21 @@
+import newpagesBoxes from "../config/pagesBoxes.json" assert { type: 'json' };
+import pagesLists from "../config/pagesLists.json" assert { type: 'json' };
+
 const boxes = document.getElementById("boxes");
 const columns = document.getElementById("columns");
 
-const pagesBoxes = [
-  ["GitHub", "https://github.com/Maiiialen", "github-mark.webp"],
-  [
-    "Linkedin",
-    "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "linkedin.webp",
-  ],
-  [
-    "DnD Chess",
-    "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "start-up.webp",
-  ],
-  [
-    "Library",
-    "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "start-up.webp",
-  ],
-  [
-    "UI Environment",
-    "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "start-up.webp",
-  ],
-  [
-    "Portfolio",
-    "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
-    "start-up.webp",
-  ],
-];
-
-const listTittles = ["Nice Documentations", "Essential Pages"];
-const pagesLists = [
-  [
-    ["The Odin Project", "https://www.theodinproject.com/"],
-    ["React Documentation", ""],
-    ["Zustand Documentation", ""],
-    ["DnD Documentation", ""],
-  ],
-  [
-    ["Stack Overflow", ""],
-    ["Developer mozilla", "https://developer.mozilla.org/en-US/"],
-  ],
-];
 const boxColors = ["violet", "red", "yellow", "green", "blue", "pink"];
 const listColors = ["ocean", "orange"];
 
-function getImage(page) {
+function getImage(name, image) {
   const img = document.createElement("img");
-  img.src = `./imgs/${page[2]}`;
-  img.alt = page[0];
+  img.src = `./imgs/${image}`;
+  img.alt = name;
   img.className = "boxImg";
   return img;
 }
 
-function getBox(page, index) {
+function getBox(name, details, index) {
   const box = document.createElement("a");
   box.style.color = `var(--${boxColors[index % boxColors.length]})`;
   box.style.background = `linear-gradient(135deg, var(--${
@@ -63,26 +24,25 @@ function getBox(page, index) {
     boxColors[index % boxColors.length]
   }) 73%)`;
   box.className = "box";
-  box.href = page[1];
-  box.appendChild(getImage(page));
+  box.href = details.link;
+  box.appendChild(getImage(name, details.image));
   return box;
 }
 
 function buildBoxes() {
-  pagesBoxes.forEach((page, index) => {
-    boxes.appendChild(getBox(page, index));
+  Object.entries(newpagesBoxes).forEach(([name, details], index) => {
+    boxes.appendChild(getBox(name, details, index));
   });
 }
 
-function getListObject(page) {
+function getListObject(list) {
   const listObjects = document.createElement("ul");
-  page.forEach((page) => {
+  Object.entries(list).forEach(([name, link]) => {
     const listObject = document.createElement("li");
     const linkObject = document.createElement("a");
     linkObject.className = "listItem";
-    linkObject.innerText = page[0];
-    // listObject.onclick = () => location.href = page[1]
-    linkObject.href = page[1];
+    linkObject.innerText = name;
+    linkObject.href = link;
     listObjects.appendChild(listObject);
     listObject.appendChild(linkObject);
   });
@@ -90,14 +50,14 @@ function getListObject(page) {
   return listObjects;
 }
 
-function getListTitle(index) {
+function getListTitle(name) {
   const listTitle = document.createElement("div");
   listTitle.className = "listTitle";
-  listTitle.innerText = listTittles[index];
+  listTitle.innerText = name;
   return listTitle;
 }
 
-function getList(page, index) {
+function getList(name, pages, index) {
   const list = document.createElement("div");
   list.style.color = `var(--${listColors[index % listColors.length]})`;
   list.style.background = `linear-gradient(135deg, var(--${
@@ -106,14 +66,14 @@ function getList(page, index) {
     listColors[index % listColors.length]
   }) 73%)`;
   list.className = "listBox";
-  list.appendChild(getListTitle(index));
-  list.appendChild(getListObject(page));
+  list.appendChild(getListTitle(name));
+  list.appendChild(getListObject(pages));
   return list;
 }
 
 function buildLists() {
-  pagesLists.forEach((page, index) => {
-    columns.appendChild(getList(page, index));
+  Object.entries(pagesLists).forEach(([name, pages], index) => {
+    columns.appendChild(getList(name, pages, index));
   });
 }
 

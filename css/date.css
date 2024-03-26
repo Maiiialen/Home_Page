@@ -1,0 +1,27 @@
+.info {
+  height: calc(41vh - 1.5 * var(--new-margin));
+  margin: calc(var(--new-margin) / 2) var(--new-margin) var(--new-margin)
+    var(--new-margin);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  z-index: 3;
+}
+
+.info > *:nth-child(3) {
+  grid-column: 1/-1;
+}
+
+#date {
+  font-size: var(--date-font);
+}
+
+#hour {
+  font-size: var(--hour-font);
+}
+
+#greeting {
+  font-size: var(--greeting-font);
+}
