@@ -1,16 +1,11 @@
 #page {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   transition: color 0.5s;
   transition: background-color 0.5s 1s;
-
-  --new-margin: 100px;
-  --hour-font: clamp(24px, 10em, 17vh);
-  --date-font: clamp(24px, 4.4em, 10vh);
-  --greeting-font: clamp(24px, 3.5em, 7vh);
-  --text-font: clamp(18px, 1.25em, 5vh);
 }
 
 .dark {
@@ -25,11 +20,10 @@
 
 #mode {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   width: 50px;
-  margin: 10px;
-  z-index: 1;
+  z-index: 10;
 }
 
 #circle {
