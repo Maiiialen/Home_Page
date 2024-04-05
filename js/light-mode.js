@@ -1,4 +1,5 @@
 const page = document.getElementById("page");
+const mode = document.getElementById("mode");
 const circle = document.getElementById("circle");
 const light = document.getElementById("mode");
 const modes = ["dark", "light"];

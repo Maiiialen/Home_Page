@@ -1,11 +1,7 @@
-import newpagesBoxes from "../config/pagesBoxes.json" assert { type: 'json' };
-import pagesLists from "../config/pagesLists.json" assert { type: 'json' };
+import { pagesBoxes, pagesLists, boxColors, listColors } from "./config.js";
 
 const boxes = document.getElementById("boxes");
 const columns = document.getElementById("columns");
-
-const boxColors = ["violet", "red", "yellow", "green", "blue", "pink"];
-const listColors = ["ocean", "orange"];
 
 function getImage(name, image) {
   const img = document.createElement("img");
@@ -30,7 +26,7 @@ function getBox(name, details, index) {
 }
 
 function buildBoxes() {
-  Object.entries(newpagesBoxes).forEach(([name, details], index) => {
+  Object.entries(pagesBoxes).forEach(([name, details], index) => {
     boxes.appendChild(getBox(name, details, index));
   });
 }
