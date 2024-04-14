@@ -14,6 +14,8 @@ This React project aims to create a customizable startpage that can be used in w
 
 <img src="readme_files/start_page_settings.png">
 
+---
+
 ### Setup New Tab
 1. Install extension [New Tab Redirect](https://chromewebstore.google.com/detail/icpgjfneehieebagbmdbhnlpiopdcmna)
 <img src="readme_files/extensions.png">
@@ -24,6 +26,8 @@ This React project aims to create a customizable startpage that can be used in w
 3. In **Manage extension** page change settings to allow access to file URLs.
 <img src="readme_files/manage_extension.png">
 
+---
+
 ## Configuration
 In `config.js` you can change used images, links, and names of all buttons and lists as well as colors of all boxes and lists.
 
@@ -31,6 +35,8 @@ By changing `isTimeWithSeconds` variable to `true`, displayed clock will include
 <img src="readme_files/clock.png" width="600">
 
 By changing username, hours of time periods and greeting contents you can change displayed greeting.
+
+---
 
 ### Used icons
 | image | source |
