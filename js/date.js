@@ -1,5 +1,3 @@
-import { isTimeWithSeconds, username } from "./config.js";
-
 let today = new Date();
 
 const dateObj = document.getElementById("date");

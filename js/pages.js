@@ -1,5 +1,3 @@
-import { pagesBoxes, pagesLists, boxColors, listColors } from "./config.js";
-
 const boxes = document.getElementById("boxes");
 const columns = document.getElementById("columns");
 
