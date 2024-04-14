@@ -11,12 +11,12 @@ function getImage(name, image) {
 
 function getBox(name, details, index) {
   const box = document.createElement("a");
-  box.style.color = `var(--${boxColors[index % boxColors.length]})`;
-  box.style.background = `linear-gradient(135deg, var(--${
+  box.style.color = `${boxColors[index % boxColors.length]}`;
+  box.style.background = `linear-gradient(135deg, ${
     boxColors[index % boxColors.length]
-  }) 27%, var(--dark-${boxColors[index % boxColors.length]}) 50%, var(--${
+  } 27%, ${boxColorsDark[index % boxColors.length]} 50%, ${
     boxColors[index % boxColors.length]
-  }) 73%)`;
+  } 73%`;
   box.className = "box";
   box.href = details.link;
   box.appendChild(getImage(name, details.image));
@@ -53,12 +53,12 @@ function getListTitle(name) {
 
 function getList(name, pages, index) {
   const list = document.createElement("div");
-  list.style.color = `var(--${listColors[index % listColors.length]})`;
-  list.style.background = `linear-gradient(135deg, var(--${
+  list.style.color = `${listColors[index % listColors.length]}`;
+  list.style.background = `linear-gradient(135deg, ${
     listColors[index % listColors.length]
-  }) 27%, var(--dark-${listColors[index % listColors.length]}) 50%, var(--${
+  } 27%, ${listColorsDark[index % listColors.length]} 50%, ${
     listColors[index % listColors.length]
-  }) 73%)`;
+  } 73%)`;
   list.className = "listBox";
   list.appendChild(getListTitle(name));
   list.appendChild(getListObject(pages));
