@@ -30,7 +30,7 @@ By changing username, hours of time periods and greeting contents you can change
 <p style="display:flex; gap:20px; align-items: center;">
 <img src="imgs/github-mark.webp" width="30"> github-mark.webp - https://github.com/logos</p>
 From flaticon:
-<p style="display:flex; gap:20px; align-items: center;">
+<p style="display:flex; gap:20; align-items: center;">
 <img src="imgs/linkedin.webp" width="30"> linkedin.webp - riajulislam</p>
 <p style="display:flex; gap:20px; align-items: center;">
 <img src="imgs/home.webp" width="30"> home.webp - Freepik</p>
