@@ -7,34 +7,35 @@ const pagesBoxes = {
     link: "https://www.linkedin.com/in/magdalena-sa%C5%82%C4%99ga-208b2b216/",
     image: "linkedin.webp",
   },
-  "DnD Chess": {
-    link: "https://github.com/Maiiialen",
-    image: "start-up.webp",
-  },
   "Custom Virtual Keyboard": {
-    link: "https://github.com/Maiiialen",
-    image: "start-up.webp",
+    link: "https://github.com/Maiiialen/Custom_Virtual_Keyboard",
+    image: "keyboard.png",
   },
-  Custom: {
-    link: "https://github.com/Maiiialen",
-    image: "start-up.webp",
+  "DnD Chess": {
+    link: "https://github.com/Maiiialen/DnD-Chess",
+    image: "chess.png",
   },
-  Keyboard: {
-    link: "https://github.com/Maiiialen",
-    image: "start-up.webp",
+  "Bullet Journal": {
+    link: "https://github.com/Maiiialen/BulletJournal",
+    image: "notebook.png",
+  },
+  "Home Page": {
+    link: "https://github.com/Maiiialen/Home_Page",
+    image: "home.webp",
   },
 };
 
 const pagesLists = {
   "Nice Documentations": {
     "The Odin Project": "https://www.theodinproject.com/",
-    "React Documentation": "",
-    "Zustand Documentation": "",
-    "DnD Documentation": "",
+    "React Documentation": "https://react.dev/",
+    "Zustand": "https://zustand-demo.pmnd.rs/",
+    "DnD Documentation": "https://react-dnd.github.io/react-dnd/about",
   },
   "Essential Pages": {
-    "Stack Overflow": "",
+    "Stack Overflow?": "",
     "Developer mozilla": "https://developer.mozilla.org/en-US/",
+    "Flaticon": "https://www.flaticon.com/",
   },
 };
 
@@ -46,3 +47,17 @@ const listColors = ["ocean", "orange"];
 const isTimeWithSeconds = false;
 
 const username = "my Guest";
+
+// Time periods
+const startOfMorning = 6;
+
+const startOfMidday = 12;
+
+const startOfEvening = 17;
+
+// Greeting contents
+const MorningGreetings = "Good morning";
+
+const MiddayGreetings = "Good afternoon";
+
+const EveningGreetings = "Good evening";

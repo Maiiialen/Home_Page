@@ -5,7 +5,7 @@ const hourObj = document.getElementById("hour");
 const greeting = document.getElementById("greeting");
 
 function setDate() {
-  dateObj.innerText = `${today.getDay() + 1} ${today.toLocaleString("default", {
+  dateObj.innerText = `${today.getDate()} ${today.toLocaleString("default", {
     month: "long",
   })} ${today.getFullYear()}`;
 }
@@ -24,12 +24,12 @@ function setHour() {
 function setGreeting() {
   const hour = today.getHours();
 
-  if (hour >= 6 && hour < 12) {
-    greeting.innerText = `Good morning ${username}!`;
-  } else if (hour >= 12 && hour < 17) {
-    greeting.innerText = `Good afternoon ${username}!`;
+  if (hour >= startOfMorning && hour < startOfMidday) {
+    greeting.innerText = `${MorningGreetings} ${username}!`;
+  } else if (hour >= startOfMidday && hour < startOfEvening) {
+    greeting.innerText = `${MiddayGreetings} ${username}!`;
   } else {
-    greeting.innerText = `Good evening ${username}!`;
+    greeting.innerText = `${EveningGreetings} ${username}!`;
   }
 }
 
