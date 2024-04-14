@@ -21,10 +21,10 @@ This React project aims to create a customizable startpage that can be used in w
 <img src="readme_files/manage_extension.png">
 
 ## Configuration
-In `config.js` you can change used images, links, and names of all buttons and lists.
-When `isTimeWithSeconds` variable is changes to `true` seconds will be ncluced in shown time.
+In `config.js` you can change used images, links, and names of all buttons and lists as well as colors of all boxes and lists.
+By changing `isTimeWithSeconds` variable to `true`, displayed clock will include seconds.
 <img src="readme_files/clock.png" width="600">
-By changing username, hours of time periods and greeting contents you can displayed change greeting.
+By changing username, hours of time periods and greeting contents you can change displayed greeting.
 
 ### Used icons
 <p style="display:flex; gap:20px; align-items: center;">
