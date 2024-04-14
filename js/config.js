@@ -55,9 +55,13 @@ const startOfMidday = 12;
 
 const startOfEvening = 17;
 
+const startOfNight = 23;
+
 // Greeting contents
 const MorningGreetings = "Good morning";
 
 const MiddayGreetings = "Good afternoon";
 
 const EveningGreetings = "Good evening";
+
+const NightGreetings = "Time to sleep";

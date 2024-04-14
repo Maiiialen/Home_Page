@@ -28,9 +28,11 @@ function setGreeting() {
     greeting.innerText = `${MorningGreetings} ${username}!`;
   } else if (hour >= startOfMidday && hour < startOfEvening) {
     greeting.innerText = `${MiddayGreetings} ${username}!`;
-  } else {
+  } else if (hour >= startOfEvening && hour < startOfNight)  {
     greeting.innerText = `${EveningGreetings} ${username}!`;
-  }
+  } else {
+  greeting.innerText = `${NightGreetings} ${username}!`;
+}
 }
 
 function displayClock() {
