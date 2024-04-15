@@ -9,15 +9,15 @@ const pagesBoxes = {
   },
   "Custom Virtual Keyboard": {
     link: "https://github.com/Maiiialen/Custom_Virtual_Keyboard",
-    image: "keyboard.png",
+    image: "keyboard.webp",
   },
   "DnD Chess": {
     link: "https://github.com/Maiiialen/DnD-Chess",
-    image: "chess.png",
+    image: "chess.webp",
   },
   "Bullet Journal": {
     link: "https://github.com/Maiiialen/BulletJournal",
-    image: "notebook.png",
+    image: "notebook.webp",
   },
   "Home Page": {
     link: "https://github.com/Maiiialen/Home_Page",
