@@ -17,18 +17,20 @@ This React project aims to create a customizable startpage that can be used in w
 ---
 
 ### Setup New Tab
+
 1. Install extension [New Tab Redirect](https://chromewebstore.google.com/detail/icpgjfneehieebagbmdbhnlpiopdcmna)
-<img src="readme_files/extensions.png">
+   <img src="readme_files/extensions.png">
 
 2. In **Extension Options** paste url to `index.html` in **Redirect URL**. Remember to add `file:///` or copy the link from the previous stage.
-<img src="readme_files/extension_options.png">
+   <img src="readme_files/extension_options.png">
 
 3. In the **Manage extension** page change settings to allow access to file URLs.
-<img src="readme_files/manage_extension.png">
+   <img src="readme_files/manage_extension.png">
 
 ---
 
 ## Configuration
+
 In `config.js` you can change used images, links, and names of all buttons and lists as well as the colors of all boxes and lists.
 
 By changing the `isTimeWithSeconds` variable to `true`, the displayed clock will include seconds.
@@ -39,13 +41,14 @@ By changing the username, hours of periods, and greeting contents you can change
 ---
 
 ### Used icons
-| image | source |
-| :-: | :- |
-| <img src="imgs/github-mark.webp" width="30"> | github-mark.webp - https://github.com/logos |
-| <img src="imgs/linkedin.webp" width="30"> | linkedin.webp - riajulislam |
-| <img src="imgs/home.webp" width="30"> | home.webp - Freepik |
-| <img src="imgs/notebook.png" width="30"> | notebook.png - Freepik | 
-| <img src="imgs/brightness-and-contrast-dark.webp" width="30"> | brightness-and-contrast-dark.webp - zafdesign | 
-| <img src="imgs/brightness-and-contrast-light.webp" width="30"> | brightness-and-contrast-light.webp - brightness-and-contrast-dark.webp by zafdesign with contrast | 
-| <img src="imgs/keyboard.png" width="30"> | keyboard.png - Sebastian Belalcazar | 
-| <img src="imgs/chess.png" width="30"> | chess.png - bqlqn | 
+
+|                             image                              | source                                                                                            |
+| :------------------------------------------------------------: | :------------------------------------------------------------------------------------------------ |
+|          <img src="imgs/github-mark.webp" width="30">          | github-mark.webp - https://github.com/logos                                                       |
+|           <img src="imgs/linkedin.webp" width="30">            | linkedin.webp - riajulislam                                                                       |
+|             <img src="imgs/home.webp" width="30">              | home.webp - Freepik                                                                               |
+|            <img src="imgs/notebook.png" width="30">            | notebook.png - Freepik                                                                            |
+| <img src="imgs/brightness-and-contrast-dark.webp" width="30">  | brightness-and-contrast-dark.webp - zafdesign                                                     |
+| <img src="imgs/brightness-and-contrast-light.webp" width="30"> | brightness-and-contrast-light.webp - brightness-and-contrast-dark.webp by zafdesign with contrast |
+|            <img src="imgs/keyboard.png" width="30">            | keyboard.png - Sebastian Belalcazar                                                               |
+|             <img src="imgs/chess.png" width="30">              | chess.png - bqlqn                                                                                 |
