@@ -42,13 +42,13 @@ By changing the username, hours of periods, and greeting contents you can change
 
 ### Used icons
 
-|                             image                              | source                                                                                            |
-| :------------------------------------------------------------: | :------------------------------------------------------------------------------------------------ |
-|          <img src="imgs/github-mark.webp" width="30">          | github-mark.webp - https://github.com/logos                                                       |
-|           <img src="imgs/linkedin.webp" width="30">            | linkedin.webp - riajulislam                                                                       |
-|             <img src="imgs/home.webp" width="30">              | home.webp - Freepik                                                                               |
-|            <img src="imgs/notebook.png" width="30">            | notebook.png - Freepik                                                                            |
-| <img src="imgs/brightness-and-contrast-dark.webp" width="30">  | brightness-and-contrast-dark.webp - zafdesign                                                     |
-| <img src="imgs/brightness-and-contrast-light.webp" width="30"> | brightness-and-contrast-light.webp - brightness-and-contrast-dark.webp by zafdesign with contrast |
-|            <img src="imgs/keyboard.png" width="30">            | keyboard.png - Sebastian Belalcazar                                                               |
-|             <img src="imgs/chess.png" width="30">              | chess.png - bqlqn                                                                                 |
+|                             image                              | source                                                                                          |
+| :------------------------------------------------------------: | :---------------------------------------------------------------------------------------------- |
+|          <img src="imgs/github-mark.webp" width="30">          | github-mark.png - https://github.com/logos                                                      |
+|           <img src="imgs/linkedin.webp" width="30">            | linkedin.png - riajulislam                                                                      |
+|             <img src="imgs/home.webp" width="30">              | home.png - Freepik                                                                              |
+|           <img src="imgs/notebook.webp" width="30">            | notebook.png - Freepik                                                                          |
+| <img src="imgs/brightness-and-contrast-dark.webp" width="30">  | brightness-and-contrast-dark.png - zafdesign                                                    |
+| <img src="imgs/brightness-and-contrast-light.webp" width="30"> | brightness-and-contrast-light.png - brightness-and-contrast-dark.png by zafdesign with contrast |
+|           <img src="imgs/keyboard.webp" width="30">            | keyboard.png - Sebastian Belalcazar                                                             |
+|             <img src="imgs/chess.webp" width="30">             | chess.png - bqlqn                                                                               |
