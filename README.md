@@ -2,7 +2,7 @@
 
 <img src="readme_files/mode_animation.gif" />
 
-This React project aims to create a customizable startpage that can be used in web browsers. It serves as the landing page when users open a new tab in their browser and/or as start page. Home Page provides a visually appealing and functional interface that can be personalized to suit the user's preferences. It is created with scalability in mind , which enables startpage to be used on differend devices with various resolutions and shapes. Page has light and dark mode.
+This React project aims to create a customizable startpage that can be used in web browsers. It serves as the landing page when users open a new tab in their browser and/or as a start page. Home Page provides a visually appealing and functional interface that can be personalized to suit the user's preferences. It is created with scalability in mind, which enables startpage to be used on different devices with various resolutions and shapes. The page has light and dark modes.
 
 ---
 
@@ -10,7 +10,7 @@ This React project aims to create a customizable startpage that can be used in w
 
 1. In Settings of your browser go to **Start, home, and new tab**.
 2. In **When Microsoft Edge starts** select **Open these pages:**
-3. Click **Add new page** and paste absolute path to `index.html` file with yout Home Page.
+3. Click **Add new page** and paste the absolute path to the `index.html` file with your Home Page.
 
 <img src="readme_files/start_page_settings.png">
 
@@ -20,21 +20,21 @@ This React project aims to create a customizable startpage that can be used in w
 1. Install extension [New Tab Redirect](https://chromewebstore.google.com/detail/icpgjfneehieebagbmdbhnlpiopdcmna)
 <img src="readme_files/extensions.png">
 
-2. In **Extension Options** paste url to `index.html` in **Redirect URL**. Remember to add `file:///` or copy link from previous stage.
+2. In **Extension Options** paste url to `index.html` in **Redirect URL**. Remember to add `file:///` or copy the link from the previous stage.
 <img src="readme_files/extension_options.png">
 
-3. In **Manage extension** page change settings to allow access to file URLs.
+3. In the **Manage extension** page change settings to allow access to file URLs.
 <img src="readme_files/manage_extension.png">
 
 ---
 
 ## Configuration
-In `config.js` you can change used images, links, and names of all buttons and lists as well as colors of all boxes and lists.
+In `config.js` you can change used images, links, and names of all buttons and lists as well as the colors of all boxes and lists.
 
-By changing `isTimeWithSeconds` variable to `true`, displayed clock will include seconds.
+By changing the `isTimeWithSeconds` variable to `true`, the displayed clock will include seconds.
 <img src="readme_files/clock.png" width="600">
 
-By changing username, hours of time periods and greeting contents you can change displayed greeting.
+By changing the username, hours of periods, and greeting contents you can change the displayed greeting.
 
 ---
 
