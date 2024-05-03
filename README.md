@@ -44,7 +44,9 @@ You can customize the page's title and image by editing the index.html file.
 Additionally, the page can be rendered in either *scalability mode* or *desktop mode*, depending on which styles are uncommented in the `index.html` file.
 - In *scalability mode*, the layout dynamically adjusts to fit different window resolutions, with components resizing and repositioning to optimize the viewing experience. This can be checked in dev tools by changing emulated device.
 <img src="readme_files/emulated_devices.png">
+
 - In *desktop mode*, the page is tailored for larger screens and landscape orientations, offering an ideal layout for desktop and widescreen displays. This mode ensures the best visual quality, providing a **perfect score** in terms of design and performance which can be confirmed in Lighthouse dev tool.
+<img src="readme_files/perfect_score.png">
 
 ---
 
