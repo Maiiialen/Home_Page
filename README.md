@@ -38,7 +38,16 @@ By changing the `isTimeWithSeconds` variable to `true`, the displayed clock will
 
 By changing the username, hours of periods, and greeting contents you can change the displayed greeting.
 
+You can customize the page's title and image by editing the index.html file.
+
+Additionally, the page can be rendered in either *scalability mode* or *desktop mode*, depending on which styles are uncommented in the `index.html` file.
+- In *scalability mode*, the layout dynamically adjusts to fit different window resolutions, with components resizing and repositioning to optimize the viewing experience.
+- In *desktop mode*, the page is tailored for larger screens and landscape orientations, offering an ideal layout for desktop and widescreen displays. This mode ensures the best visual quality, providing a **perfect score** in terms of design and performance which can be confirmed in Lighthouse dev tool.
+
 ---
+
+### Used font
+Font used in project: [Kanit](https://fonts.google.com/specimen/Kanit)
 
 ### Used icons
 
