@@ -34,6 +34,7 @@ This React project aims to create a customizable startpage that can be used in w
 In `config.js` you can change used images, links, and names of all buttons and lists as well as the colors of all boxes and lists.
 
 By changing the `isTimeWithSeconds` variable to `true`, the displayed clock will include seconds.
+
 <img src="readme_files/clock.png" width="600">
 
 By changing the username, hours of periods, and greeting contents you can change the displayed greeting.
@@ -41,7 +42,8 @@ By changing the username, hours of periods, and greeting contents you can change
 You can customize the page's title and image by editing the index.html file.
 
 Additionally, the page can be rendered in either *scalability mode* or *desktop mode*, depending on which styles are uncommented in the `index.html` file.
-- In *scalability mode*, the layout dynamically adjusts to fit different window resolutions, with components resizing and repositioning to optimize the viewing experience.
+- In *scalability mode*, the layout dynamically adjusts to fit different window resolutions, with components resizing and repositioning to optimize the viewing experience. This can be checked in dev tools by changing emulated device.
+<img src="readme_files/emulated_devices.png">
 - In *desktop mode*, the page is tailored for larger screens and landscape orientations, offering an ideal layout for desktop and widescreen displays. This mode ensures the best visual quality, providing a **perfect score** in terms of design and performance which can be confirmed in Lighthouse dev tool.
 
 ---
