@@ -19,12 +19,15 @@ This React project aims to create a customizable startpage that can be used in w
 ### Setup New Tab
 
 1. Install extension [New Tab Redirect](https://chromewebstore.google.com/detail/icpgjfneehieebagbmdbhnlpiopdcmna)
+
    <img src="readme_files/extensions.png">
 
-2. In **Extension Options** paste url to `index.html` in **Redirect URL**. Remember to add `file:///` or copy the link from the previous stage.
+3. In **Extension Options** paste url to `index.html` in **Redirect URL**. Remember to add `file:///` or copy the link from the previous stage.
+
    <img src="readme_files/extension_options.png">
 
-3. In the **Manage extension** page change settings to allow access to file URLs.
+5. In the **Manage extension** page change settings to allow access to file URLs.
+
    <img src="readme_files/manage_extension.png">
 
 ---
@@ -43,15 +46,17 @@ You can customize the page's title and image by editing the index.html file.
 
 Additionally, the page can be rendered in either *scalability mode* or *desktop mode*, depending on which styles are uncommented in the `index.html` file.
 - In *scalability mode*, the layout dynamically adjusts to fit different window resolutions, with components resizing and repositioning to optimize the viewing experience. This can be checked in dev tools by changing emulated device.
-<img src="readme_files/emulated_devices.png">
+
+  <img src="readme_files/emulated_devices.png">
 
 - In *desktop mode*, the page is tailored for larger screens and landscape orientations, offering an ideal layout for desktop and widescreen displays. This mode ensures the best visual quality, providing a **perfect score** in terms of design and performance which can be confirmed in Lighthouse dev tool.
-<img src="readme_files/perfect_score.png">
+
+  <img src="readme_files/perfect_score.png">
 
 ---
 
 ### Used font
-Font used in project: [Kanit](https://fonts.google.com/specimen/Kanit)
+Google Font used in project: [Kanit](https://fonts.google.com/specimen/Kanit)
 
 ### Used icons
 
