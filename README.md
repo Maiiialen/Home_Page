@@ -4,6 +4,9 @@
 
 This React project aims to create a customizable startpage that can be used in web browsers. It serves as the landing page when users open a new tab in their browser and/or as a start page. Home Page provides a visually appealing and functional interface that can be personalized to suit the user's preferences. It is created with scalability in mind, which enables startpage to be used on different devices with various resolutions and shapes. The page has light and dark modes.
 
+### Demo
+[maiiialen.github.io/Home_Page/]([maiiialen.github.io/Home_Page/](https://maiiialen.github.io/Home_Page/))
+
 ---
 
 ### Setup Start Page
